@@ -30,8 +30,37 @@ export default function AboutPage() {
           <p>
           Deshalb biete ich jetzt auch anderen älteren Menschen meine Unterstützung an. Ich erkläre Technik ohne Stress, ohne komplizierte Begriffe, und so, dass man es wirklich versteht. Ich freue mich, wenn ich helfen kann!
 
+
           </p>
         </section>
+        
+         <footer className="max-w-3xl mx-auto mt-12 border-t border-gray-300 pt-6 text-center space-y-2 text-gray-700">
+        <p className="font-semibold">Kontakt</p>
+        <p>
+          📧 <a href="mailto:paulinag0809@gmail.com" className="text-sky-600 hover:underline">paulinag0809@gmail.com</a>
+        </p>
+        <p>
+          📱 <a href="tel:+4367762940769" className="text-sky-600 hover:underline">+43 677 62940769</a>
+        </p>
+        <div className="flex justify-center gap-6 mt-4">
+          <a
+            href="https://www.linkedin.com/in/paulina-glantschnig-b99855328"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-700 hover:underline"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/paulinaglantschnig/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-700 hover:underline"
+          >
+            Instagram
+          </a>
+        </div>
+      </footer>
 
         
       </div>
