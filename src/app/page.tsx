@@ -36,32 +36,31 @@ export default function HomePage() {
         </section> 
 
         <section className="mb-12">
-  <h2 className="text-3xl font-bold text-center text-sky-700 mb-8">Preise & Modelle</h2>
+  <h2 className="text-2xl font-semibold mb-3 text-sky-600">Preise & Modelle</h2>
 
-  <div className="space-y-8">
+  
     {/* Stundenmodell */}
-    <div className="bg-white rounded-xl shadow p-6">
-      <h3 className="text-2xl font-semibold text-sky-600 mb-2">1. Flexible Hilfe – pro Stunde</h3>
-      <p className="text-gray-700 mb-3">
+    
+      <h3 className="text-xl font-semibold text-sky-600 mb-2">1. Flexible Hilfe – pro Stunde</h3>
+      <p className="text-lg text-gray-700 mb-3">
         Perfekt, wenn Sie nur manchmal Unterstützung brauchen.
       </p>
-      <p className="text-xl font-bold text-sky-700 mb-4">25 € pro Stunde</p>
-    </div>
+      <p className="text-lg font-semibold text-gray-700 mb-3">25 € pro Stunde</p>
+    
 
     {/* Monatsabo */}
-    <div className="bg-white rounded-xl shadow p-6">
-      <h3 className="text-2xl font-semibold text-sky-600 mb-2">2. Rundum-Sorglos – Monatsabo</h3>
-      <p className="text-gray-700 mb-3">
+   
+      <h3 className="text-xl font-semibold text-sky-600 mb-2">2. Rundum-Sorglos – Monatsabo</h3>
+      <p className="text-lg text-gray-700 mb-3">
         Ideal, wenn Sie regelmäßig Fragen haben oder jederzeit Hilfe möchten.
       </p>
-      <p className="text-xl font-bold text-sky-700 mb-4">75 € pro Monat</p>
+      <p className="text-lg font-semibold text-gray-700 mb-4">75 € pro Monat</p>
       <ul className="list-disc list-inside space-y-2 text-gray-700">
         <li>Unbegrenzte Unterstützung per Telefon, E-Mail oder Videocall</li>
         <li>Hausbesuche nach Absprache</li>
         <li>Priorisierte Hilfe bei akuten Problemen</li>
       </ul>
-    </div>
-  </div>
+   
 </section>
 
 
