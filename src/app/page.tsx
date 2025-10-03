@@ -23,11 +23,15 @@ export default function HomePage() {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-3 text-sky-600">Was ich anbiete</h2>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Einrichtung von Handys und Laptops</li>
+            <li>Neue Geräte einrichten</li>
             <li>Passwortmanager sicher nutzen</li>
-            <li>WhatsApp, Fotos & Videotelefonie verstehen</li>
-            <li>Hilfe bei Online-Banking & E-Mails</li>
-            <li>Ich beantworte jede technische Frage – in Ruhe und ohne Fachchinesisch.</li>
+            <li>Updates & Sicherheitseinstellungen vornehmen</li>
+            <li>Social-Media verstehen und nutzen</li>
+            <li>Digitale Kalender verwalten</li>
+            <li>Spam & Phishing erkennen und vermeiden</li>
+            <li>Falschinformationen und KI-generierte Inhalte erkennen</li>
+            <li>Künstliche Intelligenz verstehen und nutzen</li>
+            <li>jegliche Probleme mit Technik lösen und erklären</li>
           </ul>
         </section>
 
