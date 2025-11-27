@@ -15,11 +15,11 @@ export default function HomePage() {
             className="rounded-full mb-4 shadow-md"
           />
           <h1 className="text-4xl font-bold text-sky-700 mb-2">Digitalhilfe</h1>
-          <p className="text-xl text-center">Die neue Welt ist digital. Arzttermine, Behördenwege, Fahrkarten, Bank, Fotos – dazu zig Passwörter, ständige Updates, Betrugversuche und überall neue KI-Funktionen. 
+          <p className="text-xl text-center"><strong>Die neue Welt ist digital.</strong> Arzttermine, Behördenwege, Fahrkarten, Bank, Fotos – dazu zig <strong>Passwörter</strong>, ständige <strong>Updates, Betrugversuche</strong> und überall neue <strong>KI-Funktionen</strong>. <br />
 
-Viele ältere Menschen fühlen sich verständlich überfordert: „Welche App brauche ich? Ist diese Nachricht echt? Wo war noch gleich mein Passwort?“ 
+Viele ältere Menschen fühlen sich verständlich <strong>überfordert</strong>: „Welche App brauche ich? Ist diese Nachricht echt? Wo war noch gleich mein Passwort?“ <br />
 
-Genau hier helfen wir – ruhig, geduldig, ohne Fachchinesisch – damit Sie sich wieder sicher fühlen und Dinge selbst erledigen können.</p>
+Genau hier helfen wir – ruhig, geduldig, <strong>ohne Fachchinesisch</strong> – damit Sie sich wieder sicher fühlen und Dinge <strong>selbst</strong> erledigen können.</p>
           
         </header>
 
@@ -81,9 +81,6 @@ Genau hier helfen wir – ruhig, geduldig, ohne Fachchinesisch – damit Sie sic
         <section className="mb-12">
   <h2 className="text-2xl font-semibold mb-3 text-sky-600">Preis</h2>
     
-      <h3 className="text-xl font-semibold text-sky-600 mb-2">Flexible Hilfe</h3>
-      <p className="text-lg text-gray-700 mb-3">
-      </p>
       <p className="text-lg font-semibold text-gray-700 mb-3">38 € pro Stunde</p>
    
 </section>
@@ -91,11 +88,12 @@ Genau hier helfen wir – ruhig, geduldig, ohne Fachchinesisch – damit Sie sic
      <section className="mb-12">
   <h2 className="text-2xl font-semibold mb-3 text-sky-600">Über mich</h2>
     
-      <h3 className="text-xl font-semibold text-sky-600 mb-2">Ich bin Paulina, 18, HTL Spengergasse (IT-Zweig), aus Bisamberg. Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis „Ist das echt?“.
-Was mich ausmacht: Geduld, Klarheit, Verlässlichkeit. 
-Ziel: nicht nur „Knopf drücken“, sondern verstehen & selbst können.
+      <p className="text-lg mb-2">Ich bin Paulina, 18, HTL Spengergasse (IT-Zweig), aus <strong>Bisamberg</strong>. Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis „Ist das echt?“. <br />
 
-Ich freue mich, wenn digitale Dinge für Sie leicht werden.</h3>
+Was mich ausmacht: <strong>Geduld, Klarheit, Verlässlichkeit</strong>. <br /> 
+Ziel: nicht nur „Knopf drücken“, sondern <strong>verstehen & selbst können</strong>. <br />
+<br />
+Ich freue mich, wenn digitale Dinge für Sie <strong>leicht</strong> werden.</p>
    
 </section>
 
@@ -107,8 +105,8 @@ Ich freue mich, wenn digitale Dinge für Sie leicht werden.</h3>
     Schicken Sie mir eine Nachricht oder rufen Sie mich an. Ich freue mich, helfen zu dürfen!
   </p>
   <p className="text-lg font-medium mb-4">
-    Telefon: <a href="tel:+4367762940769" className="text-sky-700 hover:underline">+43 677 62940769</a>
-    Email: <a href="mailto:paulinaglantschnig@icloud.com" className="text-sky-700 hover:underline">paulinaglantschnig@icloud.com</a>
+    Telefon: <a href="tel:+4367762940769" className="text-sky-700 hover:underline">+43 677 62940769</a>  <br />
+    Email: <a href="mailto:paulinaglantschnig@icloud.com" className="text-sky-700 hover:underline">paulinaglantschnig@icloud.com</a> <br />
     Wir melden uns verlässlich zurück.
   </p>
 
