@@ -14,52 +14,88 @@ export default function HomePage() {
             height={150}
             className="rounded-full mb-4 shadow-md"
           />
-          <h1 className="text-4xl font-bold text-sky-700 mb-2">Digitalhelferin</h1>
-          <p className="text-xl text-center">Ich komme zu Ihnen nach Hause und helfe Ihnen, digitale Technik stressfrei zu verstehen und zu nutzen.</p>
+          <h1 className="text-4xl font-bold text-sky-700 mb-2">Digitalhilfe</h1>
+          <p className="text-xl text-center">Die neue Welt ist digital. Arzttermine, Behördenwege, Fahrkarten, Bank, Fotos – dazu zig Passwörter, ständige Updates, Betrugversuche und überall neue KI-Funktionen. 
+
+Viele ältere Menschen fühlen sich verständlich überfordert: „Welche App brauche ich? Ist diese Nachricht echt? Wo war noch gleich mein Passwort?“ 
+
+Genau hier helfen wir – ruhig, geduldig, ohne Fachchinesisch – damit Sie sich wieder sicher fühlen und Dinge selbst erledigen können.</p>
           
         </header>
 
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3 text-sky-600">Was ich anbiete</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Neue Geräte einrichten</li>
-            <li>Passwortmanager sicher nutzen</li>
-            <li>Updates & Sicherheitseinstellungen vornehmen</li>
-            <li>Social-Media verstehen und nutzen</li>
-            <li>Digitale Kalender verwalten</li>
-            <li>Spam & Phishing erkennen und vermeiden</li>
-            <li>Falschinformationen und KI-generierte Inhalte erkennen</li>
-            <li>Künstliche Intelligenz verstehen und nutzen</li>
-            <li>jegliche Probleme mit Technik lösen und erklären</li>
-          </ul>
-        </section> 
+  <h2 className="text-2xl font-semibold mb-3 text-sky-600">Wobei wir Sie konkret stärken</h2>
+
+  <div className="space-y-4 text-lg">
+    <h3 className="font-semibold text-sky-700">1) Geräte & Konten – die Basis</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Smartphone/Tablet/Laptop, E-Mail, Apps einrichten</li>
+      <li>Passwörter sicher & merkbar (Passwortmanager, Notfallkarte)</li>
+      <li>Updates, Backups, Cloud & Fotos ordentlich sichern</li>
+    </ul>
+
+    <h3 className="font-semibold text-sky-700">2) Abläufe, die den Alltag erleichtern</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Online-Arzttermin, ELGA/Behördenwege, Öffi-Routen & Ticket-Apps</li>
+      <li>Online-Einkaufen & Rücksenden Schritt für Schritt</li>
+      <li>Familien-Kalender & gemeinsame Fotoalben</li>
+    </ul>
+
+    <h3 className="font-semibold text-sky-700">3) Fallen erkennen & vermeiden (digitale Sicherheit)</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Betrugsmaschen: WhatsApp-Trick, falsche Paket-SMS, Phishing-Mails</li>
+      <li>Seriöse Shops prüfen, sichere Bezahlwege</li>
+      <li>Abo-Fallen stoppen, App-Berechtigungen ordnen</li>
+    </ul>
+
+    <h3 className="font-semibold text-sky-700">4) Medienkompetenz</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Falschmeldungen erkennen, Quellen prüfen</li>
+      <li>Privatsphäre in WhatsApp/Facebook/Instagram einstellen</li>
+      <li>Kettenbriefe & Sensationsmeldungen einordnen</li>
+    </ul>
+
+    <h3 className="font-semibold text-sky-700">5) Künstliche Intelligenz (KI)</h3>
+    <ul className="list-disc list-inside space-y-1">
+      <li>KI als Helfer nutzen: Texte zusammenfassen, Formulare/Briefe vorbereiten, Reiseideen</li>
+      <li>KI-Bilder/Videos erkennen: „echt oder generiert?“</li>
+      <li>Kleine Alltags-Workflows (z. B. Einkaufslisten) aufsetzen</li>
+    </ul>
+  </div>
+</section>
+
+<section className="mb-10">
+  <h2 className="text-2xl font-semibold mb-3 text-sky-600">So gehen wir vor</h2>
+  <ul className="list-disc list-inside space-y-2 text-lg">
+    <li><strong>Ihr Anliegen klären:</strong> Was soll leichter werden?</li>
+    <li><strong>Einrichten & Erklären:</strong> Schritt für Schritt, in Ihrem Tempo.</li>
+    <li><strong>Merkkarte</strong> Mit den wichtigsten Handgriffen.</li>
+    <li><strong>Kurz-Check</strong> Nach ein paar Tagen: Passt alles? Offene Fragen?</li>
+  </ul>
+</section>
+
+
+
 
         <section className="mb-12">
-  <h2 className="text-2xl font-semibold mb-3 text-sky-600">Preise & Modelle</h2>
-
-  
-    {/* Stundenmodell */}
+  <h2 className="text-2xl font-semibold mb-3 text-sky-600">Preis</h2>
     
-      <h3 className="text-xl font-semibold text-sky-600 mb-2">1. Flexible Hilfe – pro Stunde</h3>
+      <h3 className="text-xl font-semibold text-sky-600 mb-2">Flexible Hilfe</h3>
       <p className="text-lg text-gray-700 mb-3">
-        Perfekt, wenn Sie nur manchmal Unterstützung brauchen.
       </p>
-      <p className="text-lg font-semibold text-gray-700 mb-3">25 € pro Stunde</p>
-    
-
-    {/* Monatsabo */}
+      <p className="text-lg font-semibold text-gray-700 mb-3">38 € pro Stunde</p>
    
-      <h3 className="text-xl font-semibold text-sky-600 mb-2">2. Rundum-Sorglos – Monatsabo</h3>
-      <p className="text-lg text-gray-700 mb-3">
-        Ideal, wenn Sie regelmäßig Fragen haben oder jederzeit Hilfe möchten.
-      </p>
-      <p className="text-lg font-semibold text-gray-700 mb-4">75 € pro Monat</p>
-      <ul className="list-disc list-inside space-y-2 text-gray-700">
-        <li>Unbegrenzte Unterstützung per Telefon, E-Mail oder Videocall</li>
-        <li>Hausbesuche nach Absprache</li>
-        <li>Priorisierte Hilfe bei akuten Problemen</li>
-      </ul>
+</section>
+
+     <section className="mb-12">
+  <h2 className="text-2xl font-semibold mb-3 text-sky-600">Über mich</h2>
+    
+      <h3 className="text-xl font-semibold text-sky-600 mb-2">Ich bin Paulina, 18, HTL Spengergasse (IT-Zweig), aus Bisamberg. Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis „Ist das echt?“.
+Was mich ausmacht: Geduld, Klarheit, Verlässlichkeit. 
+Ziel: nicht nur „Knopf drücken“, sondern verstehen & selbst können.
+
+Ich freue mich, wenn digitale Dinge für Sie leicht werden.</h3>
    
 </section>
 
@@ -72,6 +108,8 @@ export default function HomePage() {
   </p>
   <p className="text-lg font-medium mb-4">
     Telefon: <a href="tel:+4367762940769" className="text-sky-700 hover:underline">+43 677 62940769</a>
+    Email: <a href="mailto:paulinaglantschnig@icloud.com" className="text-sky-700 hover:underline">paulinaglantschnig@icloud.com</a>
+    Wir melden uns verlässlich zurück.
   </p>
 
   <form

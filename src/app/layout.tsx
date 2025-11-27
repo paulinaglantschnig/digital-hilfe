@@ -19,19 +19,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Navigation */}
         <nav className="bg-sky-700 text-white shadow mb-8">
           <div className="max-w-4xl mx-auto flex justify-between items-center p-4">
-            <h1 className="text-xl font-semibold">Digitalhelferin</h1>
+            <h1 className="text-xl font-semibold">Digitalhilfe</h1>
             <div className="flex space-x-6 text-lg">
+
               <Link
                 href="/"
                 className={`${pathname === '/' ? 'font-bold underline' : 'hover:underline'}`}
               >
                 Startseite
-              </Link>
-              <Link
-                href="/about"
-                className={`${pathname === '/about' ? 'font-bold underline' : 'hover:underline'}`}
-              >
-                Über mich
               </Link>
             </div>
           </div>
@@ -42,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </main>
 
         <footer className="text-center text-sm text-gray-500 mt-12 mb-6 border-t pt-4">
-          &copy; 2025 Digitalhelferin – Paulina Glantschnig
+          &copy; 2025 Digitalhilfe – Paulina Glantschnig
         </footer>
       </body>
     </html>
