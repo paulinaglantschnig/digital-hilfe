@@ -16,21 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de">
       <body className={`${inter.className} bg-sky-50 text-gray-800 min-h-screen flex flex-col`}>
-        {/* Navigation */}
-        <nav className="bg-sky-700 text-white shadow mb-8">
-          <div className="max-w-4xl mx-auto flex justify-between items-center p-4">
-            <h1 className="text-xl font-semibold">Digitalhilfe</h1>
-            <div className="flex space-x-6 text-lg">
-
-              <Link
-                href="/"
-                className={`${pathname === '/' ? 'font-bold underline' : 'hover:underline'}`}
-              >
-                Startseite
-              </Link>
-            </div>
-          </div>
-        </nav>
+        
 
         <main className="flex-grow max-w-4xl mx-auto w-full px-4">
           {children}
