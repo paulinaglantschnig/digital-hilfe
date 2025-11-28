@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Smartphone, Shield, Brain, BookOpen, Clock, Euro, Mail, Phone } from 'lucide-react';
-import { title } from 'process';
+
 
 export default function DigitalhilfeWebsite() {
   const problems = [
