@@ -17,7 +17,7 @@ export default function DigitalhilfeWebsite() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
-      
+
       {/* Hero Section mit Sprechblasen */}
       <section className="relative bg-white px-4 md:px-6 pt-8 md:pt-12 pb-12 md:pb-16">
         {/* Hintergrund Dekoration */}
@@ -41,12 +41,12 @@ export default function DigitalhilfeWebsite() {
                 { top: '140px', left: '58%', width: '260px' },
                 { top: '140px', right: '8%', width: '265px' },
               ];
-              
+
               return (
                 <div
                   key={idx}
                   className="absolute bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                  style={{ 
+                  style={{
                     animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
                     width: positions[idx].width,
                     top: positions[idx].top,
@@ -76,12 +76,12 @@ export default function DigitalhilfeWebsite() {
                 { top: '390px', left: '8%', width: '260px' },
                 { top: '390px', right: '8%', width: '255px' },
               ];
-              
+
               return (
                 <div
                   key={idx}
                   className="absolute bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
-                  style={{ 
+                  style={{
                     animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
                     width: positionsTablet[idx].width,
                     top: positionsTablet[idx].top,
@@ -104,7 +104,7 @@ export default function DigitalhilfeWebsite() {
               <div
                 key={idx}
                 className="bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md"
-                style={{ 
+                style={{
                   animation: `fadeInUp 0.6s ease-out ${idx * 0.08}s both`,
                 }}
               >
@@ -142,7 +142,7 @@ export default function DigitalhilfeWebsite() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
             Wobei wir Sie <span className="text-sky-600">konkret stärken</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Karte 1 */}
             <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-sky-100">
@@ -253,7 +253,7 @@ export default function DigitalhilfeWebsite() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
             So gehen wir <span className="text-sky-600">vor</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { num: "1", title: "Anliegen klären", desc: "Was soll leichter werden?" },
@@ -295,23 +295,22 @@ export default function DigitalhilfeWebsite() {
               <div className="flex justify-center md:col-span-1">
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 p-1 shadow-2xl">
                   <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-                    {/* Hier kannst du später dein Bild einfügen mit: <img src="/paulina.jpg" alt="Paulina" className="w-full h-full object-cover" /> */}
-                    <div className="text-7xl md:text-8xl font-bold text-sky-600">P</div>
+                    <img src="/paulina.jpg" alt="Paulina" className="w-full h-full object-cover" /> 
                   </div>
                 </div>
               </div>
-              
+
               {/* Text */}
               <div className="md:col-span-2 space-y-4 md:space-y-6">
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Ich bin <span className="font-bold text-sky-600">Paulina, 18</span>, HTL Spengergasse (IT-Zweig), aus <span className="font-bold">Bisamberg</span>. 
-                  Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis „Ist das echt?".
+                  Ich bin <span className="font-bold text-sky-600">Paulina, 18</span>, HTL Spengergasse (IT-Zweig), aus <span className="font-bold">Bisamberg</span>.
+                  Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis &quot;Ist das echt?&quot;.
                 </p>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                   Was mich ausmacht: <span className="font-bold text-sky-600">Geduld, Klarheit, Verlässlichkeit</span>.
                 </p>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  <span className="font-bold text-blue-600">Ziel:</span> nicht nur „Knopf drücken", sondern <span className="font-bold">verstehen & selbst können</span>. 
+                  <span className="font-bold text-blue-600">Ziel:</span> nicht nur &quot;Knopf drücken&quot;, sondern <span className="font-bold">verstehen & selbst können</span>.
                   Ich freue mich, wenn digitale Dinge für Sie <span className="font-bold text-sky-600">leicht</span> werden.
                 </p>
               </div>
@@ -324,14 +323,14 @@ export default function DigitalhilfeWebsite() {
       <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-sky-600 to-blue-700 text-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Kontakt aufnehmen</h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Kontaktinfos */}
             <div className="space-y-6 md:space-y-8">
               <p className="text-xl md:text-2xl">
                 Schicken Sie mir eine Nachricht oder rufen Sie mich an. Ich freue mich, helfen zu dürfen!
               </p>
-              
+
               <div className="space-y-4 md:space-y-6">
                 <div className="flex items-center space-x-4 text-lg md:text-xl">
                   <Phone className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" />
@@ -346,44 +345,44 @@ export default function DigitalhilfeWebsite() {
                   </a>
                 </div>
               </div>
-              
+
               <p className="text-base md:text-lg opacity-90">
                 Wir melden uns verlässlich zurück.
               </p>
             </div>
 
             <form
-            action="https://formspree.io/f/xkgrdzrl"
-            method="POST"
-            className="bg-sky-50 p-6 rounded-xl shadow-inner space-y-3"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Ihr Name"
-              required
-              className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Ihre E-Mail-Adresse"
-              required
-              className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
-            />
-            <textarea
-              name="message"
-              placeholder="Ihre Nachricht"
-              required
-              className="w-full p-3 border border-gray-300 rounded h-32 resize-none placeholder-gray-400 text-gray-800"
-            />
-            <button
-              type="submit"
-              className="bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700 transition"
+              action="https://formspree.io/f/xkgrdzrl"
+              method="POST"
+              className="bg-sky-50 p-6 rounded-xl shadow-inner space-y-3"
             >
-              Nachricht senden
-            </button>
-          </form>
+              <input
+                type="text"
+                name="name"
+                placeholder="Ihr Name"
+                required
+                className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Ihre E-Mail-Adresse"
+                required
+                className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
+              />
+              <textarea
+                name="message"
+                placeholder="Ihre Nachricht"
+                required
+                className="w-full p-3 border border-gray-300 rounded h-32 resize-none placeholder-gray-400 text-gray-800"
+              />
+              <button
+                type="submit"
+                className="bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700 transition"
+              >
+                Nachricht senden
+              </button>
+            </form>
           </div>
         </div>
       </section>
