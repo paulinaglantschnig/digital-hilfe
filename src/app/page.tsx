@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Smartphone, Shield, Brain, BookOpen, Clock, Euro, Mail, Phone } from 'lucide-react';
+import { title } from 'process';
 
 export default function DigitalhilfeWebsite() {
   const problems = [
@@ -13,6 +14,14 @@ export default function DigitalhilfeWebsite() {
     "Ich schäme mich, das schon wieder zu fragen.",
     "ID Austria versteh ich nicht.",
     "Vor kurzem ging alles noch, warum jetzt nicht?",
+  ];
+
+  const cards = [
+    { title: "Geräte & Konten", icon: Smartphone, items: ["Smartphone/Tablet/Laptop einrichten", "Email, Apps einrichten", "Passwörter sicher & merkbar (Passwortmanager)", "Updates, Backups, Cloud & Fotos ordentlich sichern"] },
+    { title: "Alltag erleichtern", icon: Clock, items: ["ELGA, ID Austria", "Öffi-Apps & Ticketing", "Online-Einkäufe & Rücksendung Schritt für Schritt"] },
+    { title: "Digitale Sicherheit", icon: Shield, items: ["Betrugsmaschen erkennen", "Sichere Bezahlwege, Seriöse Shops prüfen", "Abo-Fallen stoppen, App-Berechtigungen ordnen"] },
+    { title: "Medienkompetenz", icon: BookOpen, items: ["Falschmeldungen erkennen, Quellen prüfen", "Privatsphäre einstellen (zB WhatsApp)"] },
+    { title: "Künstliche Intelligenz (KI)", icon: Brain, items: ["KI als Helfer nutzen", "KI-Bilder/Videos erkennen"] },
   ];
 
   return (
@@ -65,23 +74,7 @@ export default function DigitalhilfeWebsite() {
             ))}
           </div>
 
-          {/* Mobile Version - 1 Spalte */}
-          <div className="md:hidden grid grid-cols-1 gap-4 max-w-md mx-auto">
-            {problems.map((problem, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${idx * 0.08}s both`,
-                }}
-              >
-                <p className="text-gray-800 text-lg leading-relaxed">
-                  {problem}
-                </p>
-                <div className="absolute -bottom-2 left-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-sky-50"></div>
-              </div>
-            ))}
-          </div>
+         
         </div>
 
         {/* Trennlinie */}
@@ -102,90 +95,64 @@ export default function DigitalhilfeWebsite() {
           </p>
         </div>
       </section>
+{/* Wobei wir helfen */}
 
-      {/* Wobei wir helfen */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-white">
-        <div className="w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
-            Wobei wir Sie <span className="text-sky-600">konkret stärken</span>
-          </h2>
 
-          {/* Grid: 1 | 2 | 3 (lg) */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-white">
+  <div className="w-full">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
+      Wobei wir Sie <span className="text-sky-600">konkret stärken</span>
+    </h2>
 
-  {/* --- Reihe 1 (3 Karten) --- */}
-  <div className="w-full max-w-md">
-    <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-sky-100 h-full">
-      <Smartphone className="w-10 h-10 md:w-12 md:h-12 text-sky-600 mb-4" />
-      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Geräte & Konten</h3>
-      <ul className="space-y-3 text-gray-700 text-lg md:text-base">
-        <li className="flex items-start"><span className="text-sky-600 mr-2">•</span><span>Smartphone/Tablet/Laptop einrichten</span></li>
-        <li className="flex items-start"><span className="text-sky-600 mr-2">•</span><span>Email, Apps einrichten</span></li>
-        <li className="flex items-start"><span className="text-sky-600 mr-2">•</span><span>Passwörter sicher & merkbar (Passwortmanager)</span></li>
-        <li className="flex items-start"><span className="text-sky-600 mr-2">•</span><span>Updates, Backups, Cloud & Fotos ordentlich sichern</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="w-full max-w-md">
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 h-full">
-      <Clock className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mb-4" />
-      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Alltag erleichtern</h3>
-      <ul className="space-y-3 text-gray-700 text-lg md:text-base">
-        <li className="flex items-start"><span className="text-blue-600 mr-2">•</span><span>ELGA, ID Austria</span></li>
-        <li className="flex items-start"><span className="text-blue-600 mr-2">•</span><span>Öffi-Routen & Ticket-Apps</span></li>
-        <li className="flex items-start"><span className="text-blue-600 mr-2">•</span><span>Online-Einkaufen & Rücksenden Schritt für Schritt</span></li>
-        <li className="flex items-start"><span className="text-sky-600 mr-2">•</span><span>Familien-Kalender & gemeinsame Fotoalben</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="w-full max-w-md">
-    <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-red-100 h-full">
-      <Shield className="w-10 h-10 md:w-12 md:h-12 text-red-600 mb-4" />
-      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Digitale Sicherheit</h3>
-      <ul className="space-y-3 text-gray-700 text-lg md:text-base">
-        <li className="flex items-start"><span className="text-red-600 mr-2">•</span><span>Betrugsmaschen erkennen</span></li>
-        <li className="flex items-start"><span className="text-red-600 mr-2">•</span><span>Seriöse Shops prüfen, sichere Bezahlwege</span></li>
-        <li className="flex items-start"><span className="text-red-600 mr-2">•</span><span>Abo-Fallen stoppen, App-Berechtigungen ordnen</span></li>
-      </ul>
-    </div>
-  </div>
-
-  {/* --- Reihe 2: Wrapper überspannt alle 3 Spalten auf lg und zentriert 2 Karten --- */}
-  <div className="lg:col-span-3 col-span-1">
-    <div className="w-full flex justify-center gap-10">
-      {/* Karte 4 */}
-      <div className="w-full max-w-md">
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 h-full">
-          <BookOpen className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mb-4" />
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Medienkompetenz</h3>
-          <ul className="space-y-3 text-gray-700 text-lg md:text-base">
-            <li className="flex items-start"><span className="text-purple-600 mr-2">•</span><span>Falschmeldungen erkennen, Quellen prüfen</span></li>
-            <li className="flex items-start"><span className="text-purple-600 mr-2">•</span><span>Privatsphäre in zB Whatsapp einstellen</span></li>
-            
-          </ul>
-        </div>
-      </div>
-
-      {/* Karte 5 */}
-      <div className="w-full max-w-md">
-        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-emerald-100 h-full">
-          <Brain className="w-10 h-10 md:w-12 md:h-12 text-emerald-600 mb-4" />
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Künstliche Intelligenz (KI)</h3>
-          <ul className="space-y-3 text-gray-700 text-lg md:text-base">
-            <li className="flex items-start"><span className=" text-emerald-600 mr-2">•</span><span>KI als Helfer im Alltag nutzen</span></li>
-            <li className="flex items-start"><span className=" text-emerald-600 mr-2">•</span><span>KI-Bilder/Videos erkennen</span></li>
-          </ul>
-        </div>
+    {/* ---------------- Tablet Version (2 Spalten) ---------------- */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:hidden">
+  {cards.map((card, idx) => (
+    <div key={idx} className="flex">
+      <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex-1">
+        <card.icon className="w-10 h-10 text-sky-600 mb-4" />
+        <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
+        <ul className="space-y-3 text-gray-700 text-base">
+          {card.items.map((item, i) => (
+            <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
-  </div>
-
+  ))}
 </div>
 
-        </div>
-      </section>
+{/* ---------------- Desktop Version (3 oben, 2 unten zentriert) ---------------- */}
+<div className="hidden lg:grid grid-cols-3 gap-10">
+  {cards.slice(0,3).map((card, idx) => (
+    <div key={idx} className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex flex-col h-full">
+      <card.icon className="w-10 h-10 text-sky-600 mb-4" />
+      <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
+      <ul className="space-y-3 text-gray-700 text-base">
+        {card.items.map((item, i) => (
+          <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+
+  {/* 2 Karten zentriert */}
+  <div className="col-span-3 flex justify-center gap-10">
+    {cards.slice(3).map((card, idx) => (
+      <div key={idx} className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex flex-col h-full">
+        <card.icon className="w-10 h-10 text-sky-600 mb-4" />
+        <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
+        <ul className="space-y-3 text-gray-700 text-base">
+          {card.items.map((item, i) => (
+            <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
+  </div>
+</section>
+
 
       {/* So gehen wir vor */}
       <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-sky-100 to-blue-100">
@@ -268,7 +235,7 @@ export default function DigitalhilfeWebsite() {
             {/* Kontaktinfos */}
             <div className="space-y-6 md:space-y-8">
               <p className="text-xl md:text-2xl">
-                Schicken Sie uns eine Nachricht oder rufen Sie uns an. Wir freuen uns, helfen zu dürfen!
+                Schicken Sie mir eine Nachricht per SMS/WhatsApp/Email oder rufen Sie mich an. Ich freue mich, helfen zu dürfen!
               </p>
 
               <div className="space-y-4 md:space-y-6">
@@ -287,7 +254,7 @@ export default function DigitalhilfeWebsite() {
               </div>
 
               <p className="text-base md:text-lg opacity-90">
-                Wir melden uns verlässlich zurück.
+                Ich melde mich verlässlich zurück.
               </p>
             </div>
 
