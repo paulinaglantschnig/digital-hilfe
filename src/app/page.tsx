@@ -7,7 +7,7 @@ import { title } from 'process';
 export default function DigitalhilfeWebsite() {
   const problems = [
     "Ich vergesse ständig meine Passwörter.",
-    "Ich hab Angst, was falsches zu drücken.",
+    "Ich hab Angst, was Falsches zu drücken.",
     "Ist diese SMS echt oder Betrug?",
     "Wozu brauche ich KI überhaupt?",
     "Ich weiß gar nicht, wo ich anfangen soll.",
