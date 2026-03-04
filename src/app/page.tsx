@@ -79,7 +79,7 @@ export default function DigitalhilfeWebsite() {
       <section className="relative pt-12 pb-24 px-6">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <span className="inline-block py-1.5 px-4 rounded-full bg-sky-50 text-sky-700 text-sm font-bold mb-8 tracking-wider uppercase border border-sky-100">
-            Geduldig • Kompetent • In Bisamberg
+            Geduldig • Kompetent • Individuell
           </span>
           <h1 className="text-5xl md:text-8xl font-black text-slate-900 mb-8 tracking-tight leading-[1.1]">
             Digitales verstehen, <br/>
