@@ -1,292 +1,253 @@
 "use client";
 
-import React from 'react';
-import { Smartphone, Shield, Brain, BookOpen, Clock, Euro, Mail, Phone } from 'lucide-react';
-
+import React, { useState } from 'react';
+import { 
+  Smartphone, Shield, Brain, BookOpen, Clock, 
+  Euro, Mail, Phone, CheckCircle2, ChevronDown, 
+  Smile, Heart, ShieldCheck 
+} from 'lucide-react';
 
 export default function DigitalhilfeWebsite() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const problems = [
-    "Ich vergesse ständig meine Passwörter.",
-    "Ich hab Angst, was Falsches zu drücken.",
-    "Ist diese SMS echt oder Betrug?",
-    "Wozu brauche ich KI überhaupt?",
-    "Ich weiß gar nicht, wo ich anfangen soll.",
-    "Ich schäme mich, das schon wieder zu fragen.",
-    "ID Austria versteh ich nicht.",
-    "Vor kurzem ging alles noch, warum jetzt nicht?",
+    "Passwörter vergessen?", "Angst, etwas falsch zu machen?", 
+    "SMS-Betrug erkennen?", "KI verstehen?", 
+    "Überfordert vom Start?", "Scham beim Fragen?",
+    "ID Austria Probleme?", "Plötzlich geht nichts mehr?"
   ];
 
   const cards = [
-    { title: "Geräte & Konten", icon: Smartphone, items: ["Smartphone/Tablet/Laptop einrichten", "Email, Apps einrichten", "Passwörter sicher & merkbar (Passwortmanager)", "Updates, Backups, Cloud & Fotos ordentlich sichern"] },
-    { title: "Alltag erleichtern", icon: Clock, items: ["ELGA, ID Austria", "Öffi-Apps & Ticketing", "Online-Einkäufe & Rücksendung Schritt für Schritt"] },
-    { title: "Digitale Sicherheit", icon: Shield, items: ["Betrugsmaschen erkennen", "Sichere Bezahlwege, Seriöse Shops prüfen", "Abo-Fallen stoppen, App-Berechtigungen ordnen"] },
-    { title: "Medienkompetenz", icon: BookOpen, items: ["Falschmeldungen erkennen, Quellen prüfen", "Privatsphäre einstellen (zB WhatsApp)"] },
-    { title: "Künstliche Intelligenz (KI)", icon: Brain, items: ["KI als Helfer nutzen", "KI-Bilder/Videos erkennen"] },
+    { title: "Geräte & Konten", icon: Smartphone, items: ["Smartphone & Laptop Setup", "E-Mail & Apps einrichten", "Sichere Passwort-Systeme", "Backups & Cloud-Ordnung"] },
+    { title: "Alltag & Behörden", icon: Clock, items: ["ID Austria & ELGA Hilfe", "Öffi-Apps & Tickets", "Sicher Online-Shoppen"] },
+    { title: "Digitale Sicherheit", icon: Shield, items: ["Betrugsmaschen erkennen", "Sichere Bezahlwege", "Abo-Fallen & Privatsphäre"] },
+    { title: "Medien & KI", icon: Brain, items: ["KI als Alltagshelfer", "Fake-News erkennen", "WhatsApp richtig nutzen"] },
+  ];
+
+  const faqs = [
+    { 
+      q: "Muss ich ein Profi-Gerät haben?", 
+      a: "Nein, überhaupt nicht. Ich helfe Ihnen genau bei den Geräten, die Sie bereits zu Hause haben und im Alltag nutzen möchten." 
+    },
+    { 
+      q: "Kommen Sie direkt zu mir nach Hause?", 
+      a: "Ja, ich besuche Sie gerne in Ihrer gewohnten Umgebung in Bisamberg und der näheren Umgebung (Korneuburg, Langenzersdorf, etc.)." 
+    },
+    { 
+      q: "Was ist, wenn ich danach wieder etwas vergesse?", 
+      a: "Keine Sorge! Wir erstellen gemeinsam eine individuelle Merkkarte mit den wichtigsten Handgriffen, damit Sie alles in Ruhe nachlesen können." 
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
-
-      {/* Hero Section mit Sprechblasen */}
-      <section className="relative bg-white px-4 md:px-8 lg:px-16 xl:px-24 pt-8 md:pt-12 pb-12 md:pb-16">
-        {/* Hintergrund Dekoration */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-sky-100 rounded-full opacity-30 blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-100 rounded-full opacity-30 blur-3xl"></div>
+    <div className="min-h-screen bg-[#fcfdfe] text-slate-900 font-sans selection:bg-sky-100">
+      
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <span className="font-bold text-2xl tracking-tight text-sky-600">Digitalhilfe Paulina</span>
+          <a href="#kontakt" className="hidden sm:block bg-sky-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-sky-700 transition shadow-md shadow-sky-100">
+            Jetzt anfragen
+          </a>
         </div>
+      </nav>
 
-        {/* Sprechblasen - versetzt angeordnet */}
-        <div className="relative z-10 w-full mx-auto mb-12 md:mb-16">
-          {/* Desktop Version - 4 Spalten, 2 Reihen */}
-          <div className="hidden lg:grid lg:grid-cols-4 gap-x-6 gap-y-8">
-            {problems.map((problem, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
-                  marginTop: idx % 2 === 0 ? '0px' : '40px'
-                }}
-              >
-                <p className="text-gray-800 text-lg leading-relaxed">
-                  {problem}
-                </p>
-                <div className="absolute -bottom-2 left-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-sky-50"></div>
-              </div>
-            ))}
-          </div>
-
-          {/* Tablet Version - 2 Spalten */}
-          <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {problems.map((problem, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
-                }}
-              >
-                <p className="text-gray-800 text-lg leading-relaxed">
-                  {problem}
-                </p>
-                <div className="absolute -bottom-2 left-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-sky-50"></div>
-              </div>
-            ))}
-          </div>
-
-         
-        </div>
-
-        {/* Trennlinie */}
-        <div className="relative z-10 max-w-4xl mx-auto mb-8 md:mb-10">
-          <div className="h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent"></div>
-        </div>
-
-        {/* Titel und Text unter den Sprechblasen */}
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-4 md:mb-6 font-light">
-            Für alle die in der digitalen Welt überfordert sind
-          </p>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-sky-600 mb-3 md:mb-4">
-            Digitalhilfe Paulina
+      {/* Hero Section */}
+      <section className="relative pt-12 pb-24 px-6">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-sky-50 text-sky-700 text-sm font-bold mb-8 tracking-wider uppercase border border-sky-100">
+            Geduldig • Kompetent • In Bisamberg
+          </span>
+          <h1 className="text-5xl md:text-8xl font-black text-slate-900 mb-8 tracking-tight leading-[1.1]">
+            Digitales verstehen, <br/>
+            <span className="text-sky-600 underline decoration-sky-100 decoration-8 underline-offset-8">ganz ohne Stress.</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-medium">
-            in Bisamberg & Umgebung
+          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-16 leading-relaxed">
+            Ich helfe Senioren und Einsteigern dabei, die Technik sicher und mit Freude zu bedienen.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            {problems.map((p, i) => (
+              <span key={i} className="bg-white border border-slate-200 px-5 py-3 rounded-2xl shadow-sm text-slate-700 font-medium hover:border-sky-300 transition-colors cursor-default">
+                {p}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
-{/* Wobei wir helfen */}
 
-
-<section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-white">
-  <div className="w-full">
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
-      Wobei wir Sie <span className="text-sky-600">konkret stärken</span>
-    </h2>
-
-    {/* ---------------- Tablet Version (2 Spalten) ---------------- */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:hidden">
-  {cards.map((card, idx) => (
-    <div key={idx} className="flex">
-      <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex-1">
-        <card.icon className="w-10 h-10 text-sky-600 mb-4" />
-        <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
-        <ul className="space-y-3 text-gray-700 text-base">
-          {card.items.map((item, i) => (
-            <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
+      {/* Mein Versprechen (Sorglos-Elemente) */}
+      <section className="py-20 bg-sky-50/50 border-y border-sky-100 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+          {[
+            { icon: Smile, title: "Kein Fach-Chinesisch", text: "Ich erkläre alles in einfachen Worten, ganz ohne komplizierte IT-Begriffe." },
+            { icon: Heart, title: "Geduld-Garantie", text: "Wir wiederholen jeden Schritt so oft, bis Sie sich wirklich sicher fühlen." },
+            { icon: ShieldCheck, title: "Sicherheit zuerst", text: "Gemeinsam sorgen wir dafür, dass Ihre Daten und Ihre Privatsphäre geschützt sind." }
+          ].map((v, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 text-sky-600">
+                <v.icon size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">{v.title}</h3>
+              <p className="text-slate-600 leading-relaxed text-lg">{v.text}</p>
+            </div>
           ))}
-        </ul>
-      </div>
-    </div>
-  ))}
-</div>
+        </div>
+      </section>
 
-{/* ---------------- Desktop Version (3 oben, 2 unten zentriert) ---------------- */}
-<div className="hidden lg:grid grid-cols-3 gap-10">
-  {cards.slice(0,3).map((card, idx) => (
-    <div key={idx} className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex flex-col h-full">
-      <card.icon className="w-10 h-10 text-sky-600 mb-4" />
-      <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
-      <ul className="space-y-3 text-gray-700 text-base">
-        {card.items.map((item, i) => (
-          <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
-        ))}
-      </ul>
-    </div>
-  ))}
+      {/* Leistungen */}
+      <section className="py-28 bg-white px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 italic">Wie ich Sie stärke</h2>
+            <div className="w-24 h-2 bg-sky-600 mx-auto rounded-full"></div>
+          </div>
 
-  {/* 2 Karten zentriert */}
-  <div className="col-span-3 flex justify-center gap-10">
-    {cards.slice(3).map((card, idx) => (
-      <div key={idx} className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-3xl shadow-lg border-2 border-sky-100 flex flex-col h-full">
-        <card.icon className="w-10 h-10 text-sky-600 mb-4" />
-        <h3 className="text-xl font-bold text-gray-800 mb-4">{card.title}</h3>
-        <ul className="space-y-3 text-gray-700 text-base">
-          {card.items.map((item, i) => (
-            <li key={i} className="flex items-start"><span className="text-sky-600 mr-2">•</span>{item}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </div>
-</div>
-  </div>
-</section>
-
-
-      {/* So gehen wir vor */}
-      <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-sky-100 to-blue-100">
-        <div className="w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-800 px-4">
-            So gehen wir <span className="text-sky-600">vor</span>
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[
-              { num: "1", title: "Anliegen klären", desc: "Was soll leichter werden?" },
-              { num: "2", title: "Einrichten & Erklären", desc: "Schritt für Schritt, in Ihrem Tempo" },
-              { num: "3", title: "Merkkarte", desc: "Mit den wichtigsten Handgriffen" },
-              { num: "4", title: "Kurz-Check", desc: "Nach ein paar Tagen: Passt alles? Offene Fragen?" }
-            ].map((step) => (
-              <div key={step.num} className="bg-white p-6 md:p-8 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform">
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-sky-600 text-white rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold mx-auto mb-4">
-                  {step.num}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {cards.map((card, idx) => (
+              <div key={idx} className="group p-10 rounded-[2.5rem] bg-[#f8fafc] border border-slate-100 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] transition-all duration-500">
+                <div className="w-14 h-14 bg-sky-600 text-white rounded-2xl flex items-center justify-center mb-8 group-hover:rotate-6 transition-transform">
+                  <card.icon size={28} />
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{step.title}</h3>
-                <p className="text-sm md:text-base text-gray-600">{step.desc}</p>
+                <h3 className="text-2xl font-extrabold mb-6 tracking-tight">{card.title}</h3>
+                <ul className="space-y-4">
+                  {card.items.map((item, i) => (
+                    <li key={i} className="flex items-start text-slate-600 font-medium">
+                      <CheckCircle2 className="w-5 h-5 text-sky-500 mr-3 mt-1 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Über mich - Erweitert */}
+      <section className="py-28 px-6 bg-[#0f172a] text-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          <div className="relative">
+            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-8 border-slate-800">
+              <img src="/paulina.jpg" alt="Paulina" className="w-full h-full object-cover" />
+            </div>
+            <div className="absolute -bottom-8 -right-8 bg-sky-600 p-8 rounded-[2rem] shadow-xl z-20 hidden md:block max-w-xs">
+              <p className="font-bold text-2xl">"Geduld ist meine größte Stärke."</p>
+            </div>
+          </div>
+          <div className="space-y-8">
+            <h2 className="text-5xl font-black tracking-tight">Hallo, ich bin Paulina.</h2>
+            <div className="space-y-6 text-xl text-slate-300 leading-relaxed font-light">
+              <p>
+                Als IT-Schülerin an der <span className="text-white font-semibold underline decoration-sky-500 underline-offset-4">HTL Spengergasse</span> erlebe ich täglich, wie schnell sich die digitale Welt dreht.
+              </p>
+              <p>
+                Ich sehe aber oft, dass Technik Menschen eher trennt als verbindet, wenn die Bedienung zur Hürde wird. <b>Das möchte ich ändern.</b>
+              </p>
+              <p>
+                In der Schule lerne ich die Theorie – bei Ihnen in Bisamberg setze ich sie in praktische, geduldige Hilfe um.
+              </p>
+            </div>
+            <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {["18 Jahre, Bisamberg", "IT-Expertise", "Senioren-Erfahrung", "Absolut verlässlich"].map((t, i) => (
+                <div key={i} className="flex items-center space-x-3 bg-slate-800/50 p-4 rounded-2xl border border-slate-700">
+                  <CheckCircle2 className="text-sky-400" size={20} />
+                  <span className="font-semibold text-slate-200">{t}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Preis */}
-      <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24 bg-white">
-        <div className="w-full max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Preis</h2>
-          <div className="bg-gradient-to-br from-sky-500 to-blue-600 text-white p-8 md:p-12 rounded-3xl shadow-2xl inline-block">
-            <Euro className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4" />
-            <p className="text-5xl md:text-6xl font-bold mb-2">38 €</p>
-            <p className="text-xl md:text-2xl opacity-90">pro Stunde</p>
+      <section className="py-24 bg-white px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-black mb-12">Fair & Transparent</h2>
+          <div className="bg-sky-50 p-12 rounded-[3rem] border-2 border-sky-100">
+            <div className="flex flex-col items-center">
+              <span className="text-sky-600 font-bold uppercase tracking-widest text-sm mb-4">Persönliche Hilfe vor Ort</span>
+              <div className="text-7xl font-black text-slate-900 mb-6 flex items-start">
+                38€<span className="text-2xl text-slate-400 mt-4 ml-2">/ Std.</span>
+              </div>
+              <p className="text-lg text-slate-600 max-w-md">
+                Keine versteckten Kosten. Fahrtkosten in <b>Bisamberg</b> sind bereits inklusive.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Über mich */}
-      <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-gray-800">Über mich</h2>
-          <div className="bg-white p-6 md:p-10 rounded-3xl shadow-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center mb-6">
-              {/* Profilbild */}
-              <div className="flex justify-center lg:col-span-1">
-                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 p-1 shadow-2xl">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-                    <img src="/paulina.jpg" alt="Paulina" className="w-full h-full object-cover" />
+      {/* FAQ Bereich */}
+      <section className="py-24 px-6 bg-slate-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-black mb-12 text-center">Häufige Fragen</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <button 
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+                >
+                  <span className="font-bold text-lg text-slate-800">{faq.q}</span>
+                  <ChevronDown className={`text-sky-600 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === i && (
+                  <div className="p-6 pt-0 text-slate-600 text-lg leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                    {faq.a}
                   </div>
-                </div>
+                )}
               </div>
-
-              {/* Text */}
-              <div className="lg:col-span-2 space-y-4 md:space-y-6">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Ich bin <span className="font-bold text-sky-600">Paulina, 18</span>, HTL Spengergasse (IT-Zweig), aus <span className="font-bold">Bisamberg</span>.
-                  Ich unterstütze seit Jahren meine Großeltern bei digitalen Fragen – vom Handy über Passwörter bis &quot;Ist das echt?&quot;.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  Was mich ausmacht: <span className="font-bold text-sky-600">Geduld, Klarheit, Verlässlichkeit</span>.
-                </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  <span className="font-bold text-blue-600">Ziel:</span> nicht nur &quot;Knopf drücken&quot;, sondern <span className="font-bold">verstehen & selbst können</span>.
-                  Ich freue mich, wenn digitale Dinge für Sie <span className="font-bold text-sky-600">leicht</span> werden.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Kontakt */}
-      <section className="py-12 md:py-20 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-sky-600 to-blue-700 text-white">
-        <div className="w-full ">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Kontakt aufnehmen</h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
-            {/* Kontaktinfos */}
-            <div className="space-y-6 md:space-y-8">
-              <p className="text-xl md:text-2xl">
-                Schicken Sie mir eine Nachricht per SMS/WhatsApp/Email oder rufen Sie mich an. Ich freue mich, helfen zu dürfen!
-              </p>
-
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-center space-x-4 text-lg md:text-xl">
-                  <Phone className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" />
-                  <a href="tel:+4367762940769" className="hover:underline break-all">
-                    +43 677 62940769
-                  </a>
+      <section id="kontakt" className="py-24 px-6">
+        <div className="max-w-6xl mx-auto bg-white rounded-[3.5rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] overflow-hidden grid lg:grid-cols-2 border border-slate-100">
+          <div className="p-16 bg-sky-600 text-white">
+            <h2 className="text-4xl font-black mb-8 leading-tight">Fragen kostet nichts.</h2>
+            <p className="text-xl text-sky-50 mb-12 leading-relaxed opacity-90">
+              Schreiben Sie mir einfach – wir finden gemeinsam heraus, wie ich Ihnen am besten helfen kann.
+            </p>
+            
+            <div className="space-y-8">
+              <a href="tel:+4367762940769" className="flex items-center p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition backdrop-blur-sm border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-6 text-sky-600 shadow-lg">
+                  <Phone size={24} />
                 </div>
-                <div className="flex items-center space-x-4 text-lg md:text-xl">
-                  <Mail className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" />
-                  <a href="mailto:paulinaglantschnig@icloud.com" className="hover:underline break-all">
-                    paulinaglantschnig@icloud.com
-                  </a>
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-wider text-sky-100 opacity-80 mb-1">Anrufen oder SMS</p>
+                  <span className="text-2xl font-bold">+43 677 62940769</span>
                 </div>
-              </div>
-
-              <p className="text-base md:text-lg opacity-90">
-                Ich melde mich verlässlich zurück.
-              </p>
+              </a>
+              <a href="mailto:paulinaglantschnig@icloud.com" className="flex items-center p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition backdrop-blur-sm border border-white/20">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-6 text-sky-600 shadow-lg">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-wider text-sky-100 opacity-80 mb-1">E-Mail schicken</p>
+                  <span className="text-xl font-bold break-all">paulinaglantschnig@icloud.com</span>
+                </div>
+              </a>
             </div>
-
-            <form
-              action="https://formspree.io/f/xkgrdzrl"
-              method="POST"
-              className="bg-sky-50 p-6 rounded-xl shadow-inner space-y-3"
-            >
-              <input
-                type="text"
-                name="name"
-                placeholder="Ihr Name"
-                required
-                className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Ihre E-Mail-Adresse"
-                required
-                className="w-full p-3 border border-gray-300 rounded placeholder-gray-400 text-gray-800"
-              />
-              <textarea
-                name="message"
-                placeholder="Ihre Nachricht"
-                required
-                className="w-full p-3 border border-gray-300 rounded h-32 resize-none placeholder-gray-400 text-gray-800"
-              />
-              <button
-                type="submit"
-                className="bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700 transition"
-              >
+          </div>
+          <div className="p-16">
+            <form action="https://formspree.io/f/xkgrdzrl" method="POST" className="space-y-6">
+              <div>
+                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Ihr Name</label>
+                <input type="text" name="name" placeholder="Vor- und Nachname" required className="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-sky-600 focus:bg-white outline-none transition-all" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">E-Mail Adresse</label>
+                <input type="email" name="email" placeholder="beispiel@mail.at" required className="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-sky-600 focus:bg-white outline-none transition-all" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Ihre Nachricht</label>
+                <textarea name="message" placeholder="Wie kann ich Ihnen helfen?" required className="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl h-40 focus:border-sky-600 focus:bg-white outline-none transition-all resize-none" />
+              </div>
+              <button type="submit" className="w-full bg-sky-600 text-white font-black py-5 rounded-2xl hover:bg-sky-700 transition shadow-xl shadow-sky-200 text-lg uppercase tracking-widest">
                 Nachricht senden
               </button>
             </form>
@@ -294,20 +255,12 @@ export default function DigitalhilfeWebsite() {
         </div>
       </section>
 
-
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+      <footer className="py-12 text-center">
+        <div className="w-20 h-1 bg-slate-200 mx-auto mb-8 rounded-full"></div>
+        <p className="text-slate-400 font-medium tracking-wide text-sm">
+          © {new Date().getFullYear()} Digitalhilfe Paulina • Bisamberg & Umgebung
+        </p>
+      </footer>
     </div>
   );
 }
