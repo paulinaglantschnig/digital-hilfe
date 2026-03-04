@@ -271,13 +271,13 @@ export default function DigitalhilfeWebsite() {
                   <span className="text-2xl font-bold text-white">+43 677 62940769</span>
                 </div>
               </a>
-              <a href="mailto:paulinaglantschnig@icloud.com" className="flex items-center p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition backdrop-blur-sm border border-white/20 group">
+              <a href="mailto:digitalhilfepaulina@gmail.com" className="flex items-center p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition backdrop-blur-sm border border-white/20 group">
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-6 text-sky-600 shadow-lg group-hover:scale-110 transition-transform">
                   <Mail size={24} />
                 </div>
                 <div>
                   <p className="text-sm font-bold uppercase tracking-wider text-sky-100 opacity-80 mb-1">E-Mail schicken</p>
-                  <span className="text-xl font-bold break-all text-white">paulinaglantschnig@icloud.com</span>
+                  <span className="text-xl font-bold break-all text-white">digitalhilfepaulina@gmail.com</span>
                 </div>
               </a>
             </div>
